@@ -85,13 +85,14 @@ function App() {
               />
               <button
                 onClick={(e) => {
-                  handleFavorite(e.target);
+                  handleFavorite(item.id);
+                  setIconState(!iconState);
                 }}
                 className="absolute top-2 right-2 bg-white rounded-full p-1 shadow-md"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  fill={"none"}
+                  fill={iconState ? "currentColor" : "none"}
                   viewBox="0 0 24 24"
                   stroke="currentColor"
                   className="w-6 h-6 text-red-500"
